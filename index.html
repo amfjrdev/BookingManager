@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle DB - Top Drivers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Top-Rated Drivers Dashboard</h1>
+            <p>Drivers with ≥4.5 rating and >10 rides this month</p>
+        </header>
+
+        <div class="loading" id="loading">Loading drivers...</div>
+        <div class="error" id="error" style="display: none;"></div>
+
+        <div class="drivers-grid" id="driversGrid" style="display: none;">
+            <!-- Driver cards will be populated here -->
+        </div>
+
+        <div class="admin-section">
+            <button id="adminBtn" class="admin-btn">Admin Dashboard</button>
+        </div>
+
+        <!-- Admin Modal -->
+        <div id="adminModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Admin Dashboard</h2>
+                <div class="admin-controls">
+                    <button id="loadTablesBtn">Load Tables</button>
+                    <select id="tableSelect" style="display: none;">
+                        <option value="">Select a table...</option>
+                    </select>
+                </div>
+                <div id="tableData" class="table-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
